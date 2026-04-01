@@ -23,8 +23,8 @@ html, body {
 
 .spotlight {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
   filter: blur(30px);
   pointer-events: none;

@@ -31,7 +31,7 @@ function createCircle(idx){
   c.style.background=colors[idx % colors.length];
   body.appendChild(c);
   const pos = randomPos();
-  const vel = {x: (Math.random()-0.5)*4, y: (Math.random()-0.5)*4};
+  const vel = {x: (Math.random()-0.5) * 10, y: (Math.random()-0.5) * 10};
   circles.push({el:c, pos, vel});
 }
 function update(){
@@ -39,8 +39,8 @@ function update(){
   const h = window.innerHeight;
   circles.forEach(c=>{
     // update position
-    c.pos.x += c.vel.x;
-    c.pos.y += c.vel.y;
+    c.pos.x += c.vel.x * 2;
+    c.pos.y += c.vel.y * 2;
     // bounce on edges
     if(c.pos.x<0||c.pos.x>w){c.vel.x*=-1;}
     if(c.pos.y<0||c.pos.y>h){c.vel.y*=-1;}
